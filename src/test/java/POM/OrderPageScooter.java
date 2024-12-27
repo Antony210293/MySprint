@@ -34,6 +34,10 @@ public class OrderPageScooter {
     private By orderCreateButton = By.xpath("//div[contains(@class,'Order_Buttons')]/button[text()='Заказать']");
     // Кнопка подтверждения заказа
     private By orderConfirmButton = By.xpath(".//button[text()='Да']");
+    // Кнопка посмотреть статус
+    private By confirmHeader = By.xpath(".//button[text()='Посмотреть статус']");
+
+
 
     // Метод для проверки открытия страницы после нажатия на кнопку "Заказать"
     public void isPageOpen(String headlineText, String text) {
@@ -110,4 +114,6 @@ public class OrderPageScooter {
     public void clickOrderConfirmButton() {
         driver.findElement(orderConfirmButton).click();
     }
+
+
 }
