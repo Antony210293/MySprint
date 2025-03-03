@@ -13,27 +13,29 @@ public class OrderPageScooter {
     // Заголовок страницы заказа (текст)
     public static final String orderHeadlineText = "Для кого самокат";
     //Имя
-    private By nameField = By.xpath(".//input[@placeholder='* Имя']");
+    private final By nameField = By.xpath(".//input[@placeholder='* Имя']");
     // Фамилия
-    private By surnameField = By.xpath(".//input[@placeholder='* Фамилия']");
+    private final By surnameField = By.xpath(".//input[@placeholder='* Фамилия']");
     // Адрес: куда привезти заказ
-    private By addressField = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
+    private final By addressField = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
     // Селектор со списком станций метро
     private By subwayField = By.xpath(".//input[@placeholder='* Станция метро']");
     // Телефон: на него позвонит курьер
-    private By phoneNumberField = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
+    private final By phoneNumberField = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
     // Кнопка Далее
-    private By orderNextButton = By.xpath(".//button[text()='Далее']");
+    private final By orderNextButton = By.xpath(".//button[text()='Далее']");
     // Когда привезти самокат
-    private By dateField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
+    private final By dateField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
     // Поле Срок аренды
-    private By rentalPeriodField = By.xpath(".//div[@class='Dropdown-placeholder']");
+    private final By rentalPeriodField = By.xpath(".//div[@class='Dropdown-placeholder']");
     // Комментарий для курьера
-    private By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
+    private final By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
     // Кнопка Заказать
-    private By orderCreateButton = By.xpath("//div[contains(@class,'Order_Buttons')]/button[text()='Заказать']");
+    private final By orderCreateButton = By.xpath("//div[contains(@class,'Order_Buttons')]/button[text()='Заказать']");
     // Кнопка подтверждения заказа
-    private By orderConfirmButton = By.xpath(".//button[text()='Да']");
+    private final By orderConfirmButton = By.xpath(".//button[text()='Да']");
+
+
 
     // Метод для проверки открытия страницы после нажатия на кнопку "Заказать"
     public void isPageOpen(String headlineText, String text) {
@@ -110,4 +112,6 @@ public class OrderPageScooter {
     public void clickOrderConfirmButton() {
         driver.findElement(orderConfirmButton).click();
     }
+
+
 }
